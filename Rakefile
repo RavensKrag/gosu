@@ -22,7 +22,11 @@ COMMON_RUBY_FILES = COMMON_FILES + FileList[
   'examples/media/*',
 ]
 
-GOSU_VERSION = ENV['GOSU_RELEASE_VERSION'] || '0.0.0'
+GOSU_VERSION = if ENV['GOSU_RELEASE_VERSION']
+	"#{ENV['GOSU_RELEASE_VERSION']}"
+else
+	'0.0.0'
+end
 
 # Sets everything except 'platform' and 'files'.
 def apply_gemspec_defaults s
