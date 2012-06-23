@@ -236,6 +236,7 @@ Gosu::Window::Window(unsigned width, unsigned height, bool fullscreen,
     pfd.iLayerType   = PFD_MAIN_PLANE;
     pfd.iPixelType   = PFD_TYPE_RGBA;
     pfd.cColorBits   = 32;
+    pfd.cStencilBits = 1;
 	int pf = ChoosePixelFormat(pimpl->hdc, &pfd);
     Win::check(pf);
     Win::check(SetPixelFormat(pimpl->hdc, pf, &pfd));

@@ -221,6 +221,7 @@ Gosu::Window::Window(unsigned width, unsigned height, bool fullscreen,
         GLX_GREEN_SIZE, 1,
         GLX_BLUE_SIZE, 1,
         GLX_DEPTH_SIZE, 1,
+        GLX_STENCIL_SIZE, 1,
         None
     };
     pimpl->visual = glXChooseVisual(pimpl->display, DefaultScreen(pimpl->display), glxAttributes);
