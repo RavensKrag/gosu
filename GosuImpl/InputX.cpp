@@ -169,8 +169,6 @@ void Gosu::Input::update()
                 }
             }
 
-            //~ unsigned id = XKeycodeToKeysym(pimpl->display, event.xkey.keycode, 0);
-
             pimpl->keyMap[event.xkey.keycode] = false;
             if (onButtonUp)
                 onButtonUp(Button(event.xkey.keycode));
