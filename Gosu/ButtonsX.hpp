@@ -41,6 +41,7 @@ namespace Gosu
         kbY = 29,
         kbZ = 52,
         
+        kbBacktick = 49,
         kbMinus = 20,
         kbEqual = 21,
         kbBracketLeft = 34,
