@@ -237,7 +237,7 @@ Gosu::Window::Window(unsigned width, unsigned height, bool fullscreen,
         NSOpenGLPFAScreenMask,
         (NSOpenGLPixelFormatAttribute)CGDisplayIDToOpenGLDisplayMask(CGMainDisplayID()),
         NSOpenGLPFADepthSize, (NSOpenGLPixelFormatAttribute)16,
-        NSOpenGLPFAStencilSize, (NSOpenGLPixelFormatAttribute)16,
+        NSOpenGLPFAStencilSize, (NSOpenGLPixelFormatAttribute)8,
         (NSOpenGLPixelFormatAttribute)0
     };
     NSOpenGLPixelFormatAttribute fullscreenAttrs[] =
