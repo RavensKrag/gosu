@@ -10,35 +10,36 @@ namespace Gosu
     {
         kbRangeBegin = 0x00,
         // Define constants based on positions on the QWERTY keyboard
-        //24-33
-        //38-46
-        //52-58
-        kbA = 'a',
-        kbB = 'b',
-        kbC = 'c',
-        kbD = 'd',
-        kbE = 'e',
-        kbF = 'f',
-        kbG = 'g',
-        kbH = 'h',
-        kbI = 'i',
-        kbJ = 'j',
-        kbK = 'k',
-        kbL = 'l',
-        kbM = 'm',
-        kbN = 'n',
-        kbO = 'o',
-        kbP = 'p',
-        kbQ = 'q',
-        kbR = 'r',
-        kbS = 's',
-        kbT = 't',
-        kbU = 'u',
-        kbV = 'v',
-        kbW = 'w',
-        kbX = 'x',
-        kbY = 'y',
-        kbZ = 'z',
+        // Using decimal because it's easier to read.
+        //24-33 - First row
+        //38-46 - Second row
+        //52-58 - Third row
+        kbA = 38,
+        kbB = 56,
+        kbC = 54,
+        kbD = 40,
+        kbE = 26,
+        kbF = 41,
+        kbG = 42,
+        kbH = 43,
+        kbI = 31,
+        kbJ = 44,
+        kbK = 45,
+        kbL = 46,
+        kbM = 58,
+        kbN = 57,
+        kbO = 32,
+        kbP = 33,
+        kbQ = 24,
+        kbR = 27,
+        kbS = 39,
+        kbT = 28,
+        kbU = 30,
+        kbV = 55,
+        kbW = 25,
+        kbX = 53,
+        kbY = 29,
+        kbZ = 52,
         
         // all constants are keysymbols.  convert all to keycodes
         // XKeysymToKeycode() so that structural bindings on letters will work.
