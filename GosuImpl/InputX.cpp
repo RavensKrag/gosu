@@ -144,11 +144,9 @@ void Gosu::Input::update()
             // unsigned keysym = XKeycodeToKeysym(pimpl->display, event.xkey.keycode, 0);
             // unsigned id = (chars == 0) ? keysym : widen(buf).at(0);
 
-            unsigned id = XKeycodeToKeysym(pimpl->display, event.xkey.keycode, 0);
-
-            pimpl->keyMap[id] = true;
+            pimpl->keyMap[event.xkey.keycode] = true;
             if (onButtonDown)
-                onButtonDown(Button(id));
+                onButtonDown(Button(event.xkey.keycode));
         }
         else if (event.type == KeyRelease)
         {
@@ -167,11 +165,11 @@ void Gosu::Input::update()
                 }
             }
 
-            unsigned id = XKeycodeToKeysym(pimpl->display, event.xkey.keycode, 0);
+            //~ unsigned id = XKeycodeToKeysym(pimpl->display, event.xkey.keycode, 0);
 
-            pimpl->keyMap[id] = false;
+            pimpl->keyMap[event.xkey.keycode] = false;
             if (onButtonUp)
-                onButtonUp(Button(id));
+                onButtonUp(Button(event.xkey.keycode));
         }
         else if (event.type == ButtonPress)
         {
