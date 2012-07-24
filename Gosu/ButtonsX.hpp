@@ -9,6 +9,10 @@ namespace Gosu
     enum ButtonName
     {
         kbRangeBegin = 0x00,
+        // Define constants based on positions on the QWERTY keyboard
+        //24-33
+        //38-46
+        //52-58
         kbA = 'a',
         kbB = 'b',
         kbC = 'c',
@@ -35,7 +39,10 @@ namespace Gosu
         kbX = 'x',
         kbY = 'y',
         kbZ = 'z',
-        kbEscape = XK_Escape,
+        
+        // all constants are keysymbols.  convert all to keycodes
+        // XKeysymToKeycode() so that structural bindings on letters will work.
+        kbEscape = XK_Escape, 
         kbF1 = XK_F1,
         kbF2 = XK_F2,
         kbF3 = XK_F3,

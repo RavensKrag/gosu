@@ -60,8 +60,10 @@ Gosu::Button Gosu::Input::charToId(wchar_t ch)
 {
     // ASCII chars
     if (ch >= 32 && ch <= 255)
+	    // Convert letter --> keysym -> keycode
         return Button(ch);
     // Other chars are conceptually not findable :(
+    // TOOD: Implement special case for \t(tab) and \n(enter), as those are easily identifiable.
     return noButton;
 }
 
@@ -76,6 +78,8 @@ wchar_t Gosu::Input::idToChar(Button btn)
     // ASCII chars
     if (btn.id() >= 32 && btn.id() <= 255)
         return btn.id();
+        // TODO: MUST convert back from keycode into character code
+         
     
     // Looking at SDL source suggests that this is to be interpreted depending on the third byte.
     // Should find solid literature on that if it exists.
