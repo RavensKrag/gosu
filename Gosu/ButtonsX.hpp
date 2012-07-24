@@ -14,7 +14,6 @@ namespace Gosu
         //24-33 - First row
         //38-46 - Second row
         //52-58 - Third row
-        // TODO: Create constants for special symbol keys, like Period, or Slash
         kbA = 38,
         kbB = 56,
         kbC = 54,
@@ -41,6 +40,17 @@ namespace Gosu
         kbX = 53,
         kbY = 29,
         kbZ = 52,
+        
+        kbMinus = 20,
+        kbEqual = 21,
+        kbBracketLeft = 34,
+        kbBracketRight = 35,
+        kbBackslash = 51,
+        kbSemicolon = 47,
+        kbApostrophe = 48,
+        kbComma = 59,
+        kbPeriod = 60,
+        kbSlash = 61,
         
         // all constants are keysymbols.  convert all to keycodes
         kbEscape = 9,// XK_Escape
