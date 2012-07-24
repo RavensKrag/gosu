@@ -751,6 +751,20 @@ namespace Gosu {
         rb_yield(Qnil);
         $self->graphics().endClipping();
     }
+    void stencil(){
+		
+		
+		// ===== Draw the actual stuff
+		rb_yield(Qnil);
+		
+		
+        
+        $self->graphics().endGL();
+    }
+    void stencil(Gosu::ZPos z){
+        // TODO: implement scheduleStencil
+        // $self->graphics().scheduleStencil(std::tr1::bind(callRubyBlock, rb_block_proc()), z);
+    } 
     %newobject record;
     Gosu::Image* record(int width, int height) {
         $self->graphics().beginRecording();

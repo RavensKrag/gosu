@@ -250,6 +250,19 @@ void Gosu::Graphics::endClipping()
     pimpl->queues.back().endClipping();
 }
 
+void Gosu::Graphics::beginStencil(double x, double y, double width, double height)
+{
+    if (pimpl->queues.size() > 1)
+        throw std::logic_error("Stencil buffer usage is not allowed while creating a macro yet");
+    
+    pimpl->queues.back().beginStencil(x, y, width, height, pimpl->physHeight);
+}
+
+void Gosu::Graphics::endStencil()
+{
+    pimpl->queues.back().endStencil();
+}
+
 void Gosu::Graphics::beginRecording()
 {
     pimpl->queues.resize(pimpl->queues.size() + 1);
